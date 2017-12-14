@@ -1,0 +1,1345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0DD3B40-8AB8-4967-8C5F-6E9263C7E775}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MGMPDV</RootNamespace>
+    <AssemblyName>MGMPDV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Intel\Deploy\PdvDeploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1F8EE33ABD84508C60B5553CD7ECB87236C957D8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PDVSat_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ACBrFramework.Net">
+      <HintPath>C:\Users\Hilton\Desktop\ACBrFramework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.0.5.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>obj\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>obj\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CBina.cs" />
+    <Compile Include="Classes\CCaixa.cs" />
+    <Compile Include="Classes\CCaixaNumero.cs" />
+    <Compile Include="Classes\CCategoria.cs" />
+    <Compile Include="Classes\CCidade.cs" />
+    <Compile Include="Classes\CCliente.cs" />
+    <Compile Include="Classes\CConfiguracao.cs" />
+    <Compile Include="Classes\CContaPagar.cs" />
+    <Compile Include="Classes\CContaReceber.cs" />
+    <Compile Include="Classes\CCupom.cs" />
+    <Compile Include="Classes\CEmpresa.cs" />
+    <Compile Include="Classes\CFuncionario.cs" />
+    <Compile Include="Classes\CIniFile.cs" />
+    <Compile Include="Classes\CItemVenda.cs" />
+    <Compile Include="Classes\CMeioPagamento.cs" />
+    <Compile Include="Classes\CProduto.cs" />
+    <Compile Include="Classes\CSat.cs" />
+    <Compile Include="Classes\CTEF.cs" />
+    <Compile Include="Classes\CTransacao.cs" />
+    <Compile Include="Classes\CVenda.cs" />
+    <Compile Include="Classes\EscPos.cs" />
+    <Compile Include="Classes\FBBanco.cs" />
+    <Compile Include="Classes\MGM.cs" />
+    <Compile Include="Classes\RawPrinterHelper.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FAbrirCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FAbrirCaixa.Designer.cs">
+      <DependentUpon>FAbrirCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FCaixa.Designer.cs">
+      <DependentUpon>FCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FCancelarCupom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FCancelarCupom.Designer.cs">
+      <DependentUpon>FCancelarCupom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FCarregando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FCarregando.Designer.cs">
+      <DependentUpon>FCarregando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FCategoria.Designer.cs">
+      <DependentUpon>FCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FCidade.Designer.cs">
+      <DependentUpon>FCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FCliente.Designer.cs">
+      <DependentUpon>FCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FConfiguracao.Designer.cs">
+      <DependentUpon>FConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FConsultaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FConsultaCategoria.Designer.cs">
+      <DependentUpon>FConsultaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FConsultaCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FConsultaCidade.Designer.cs">
+      <DependentUpon>FConsultaCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FConsultaCliente.Designer.cs">
+      <DependentUpon>FConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FConsultaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FConsultaFuncionario.Designer.cs">
+      <DependentUpon>FConsultaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FConsultaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FConsultaProduto.Designer.cs">
+      <DependentUpon>FConsultaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FContaReceber.Designer.cs">
+      <DependentUpon>FContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FDataPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FDataPicker.Designer.cs">
+      <DependentUpon>FDataPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FEmpresa.Designer.cs">
+      <DependentUpon>FEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FEntrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FEntrar.Designer.cs">
+      <DependentUpon>FEntrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FFecharCaixa1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FFecharCaixa1.Designer.cs">
+      <DependentUpon>FFecharCaixa1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FFuncionario.Designer.cs">
+      <DependentUpon>FFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FInput.Designer.cs">
+      <DependentUpon>FInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FInputDataPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FInputDataPicker.Designer.cs">
+      <DependentUpon>FInputDataPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FMessageOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FMessageOk.Designer.cs">
+      <DependentUpon>FMessageOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FMessageSimNao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FMessageSimNao.Designer.cs">
+      <DependentUpon>FMessageSimNao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FPagamento.designer.cs">
+      <DependentUpon>FPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FPDV.Designer.cs">
+      <DependentUpon>FPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FPreVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FPreVenda.Designer.cs">
+      <DependentUpon>FPreVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FProduto.Designer.cs">
+      <DependentUpon>FProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FRelatorio.Designer.cs">
+      <DependentUpon>FRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FSangriaSuprimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FSangriaSuprimento.Designer.cs">
+      <DependentUpon>FSangriaSuprimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FVendaDetalhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FVendaDetalhe.Designer.cs">
+      <DependentUpon>FVendaDetalhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PainelMerchan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PainelMerchan.Designer.cs">
+      <DependentUpon>PainelMerchan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\FRCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FRCaixa.Designer.cs">
+      <DependentUpon>FRCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FRCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FRCliente.Designer.cs">
+      <DependentUpon>FRCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FRProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FRProduto.Designer.cs">
+      <DependentUpon>FRProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FRVendapagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FRVendapagamento.Designer.cs">
+      <DependentUpon>FRVendapagamento.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formularios\FAbrirCaixa.resx">
+      <DependentUpon>FAbrirCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FCaixa.resx">
+      <DependentUpon>FCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FCancelarCupom.resx">
+      <DependentUpon>FCancelarCupom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FCarregando.resx">
+      <DependentUpon>FCarregando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FCategoria.resx">
+      <DependentUpon>FCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FCidade.resx">
+      <DependentUpon>FCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FCliente.resx">
+      <DependentUpon>FCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FConfiguracao.resx">
+      <DependentUpon>FConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FConsultaCategoria.resx">
+      <DependentUpon>FConsultaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FConsultaCidade.resx">
+      <DependentUpon>FConsultaCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FConsultaCliente.resx">
+      <DependentUpon>FConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FConsultaFuncionario.resx">
+      <DependentUpon>FConsultaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FConsultaProduto.resx">
+      <DependentUpon>FConsultaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FContaReceber.resx">
+      <DependentUpon>FContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FDataPicker.resx">
+      <DependentUpon>FDataPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FEmpresa.resx">
+      <DependentUpon>FEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FEntrar.resx">
+      <DependentUpon>FEntrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FFecharCaixa1.resx">
+      <DependentUpon>FFecharCaixa1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FFuncionario.resx">
+      <DependentUpon>FFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FInput.resx">
+      <DependentUpon>FInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FInputDataPicker.resx">
+      <DependentUpon>FInputDataPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FMessageOk.resx">
+      <DependentUpon>FMessageOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FMessageSimNao.resx">
+      <DependentUpon>FMessageSimNao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FPagamento.resx">
+      <DependentUpon>FPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FPDV.resx">
+      <DependentUpon>FPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FPreVenda.resx">
+      <DependentUpon>FPreVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FProduto.resx">
+      <DependentUpon>FProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FRelatorio.resx">
+      <DependentUpon>FRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FSangriaSuprimento.resx">
+      <DependentUpon>FSangriaSuprimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FVendaDetalhe.resx">
+      <DependentUpon>FVendaDetalhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PainelMerchan.resx">
+      <DependentUpon>PainelMerchan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Relatorios\FRCaixa.resx">
+      <DependentUpon>FRCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FRCliente.resx">
+      <DependentUpon>FRCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FRProduto.resx">
+      <DependentUpon>FRProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FRVendapagamento.resx">
+      <DependentUpon>FRVendapagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RCaixa.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RCliente.rdlc" />
+    <EmbeddedResource Include="Relatorios\RProduto.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorios\RVendapagamento.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PDVSat_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7321_128x1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393872801_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundconsulta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-phone-16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-phone-icon-pngsisel-phonepng-alutnajv1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_view1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubes_yellow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubes_yellow11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_dollar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dot-chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A.fw2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A.fw11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoFastCom.fw1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGMLib.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGMLib1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-add-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-delete-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria.fw1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria1.fw2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria1.fw11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingbasket_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingbasket_delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparent32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck_red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-16x1611.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utilities-icon321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7321_128x1282.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393872801_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_blue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_blue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundconsulta2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-phone-16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-phone-icon-pngsisel-phonepng-alutnajv2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_view2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubes_yellow3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubes_yellow12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_dollar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dot-chart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A.fw3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A.fw12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoFastCom.fw2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGM2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGMLib2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGMLib3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-add-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-delete-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria.fw2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria1.fw3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria1.fw12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingbasket_add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingbasket_delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_blue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparent32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck_red2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-16x1612.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utilities-icon322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7321_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundconsulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-phone-16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-phone-icon-pngsisel-phonepng-alutnajv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubes_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubes_yellow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dot-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A.fw1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-A1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCom-R3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoFastCom.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MGM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promissoria1.fw1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingbasket_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingbasket_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparent32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utilities-icon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1393872801_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logoescrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundabrircaixa640x480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundfecharcaixa640x480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundfecharcaixa640x4801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundprevenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundprevenda1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundprevenda2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundprevenda3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundprevenda4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1916561.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6873569-silver-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gray_phone_background_plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gray.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1522125.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_box-shadow-left-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Align-center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Align-center1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exitmetro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud-refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paperclip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check boxes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-user-icon-256-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxproduct.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.fw16.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telefone24.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxproduct24.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layout24.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker24.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fexar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechar-minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prévenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prévenda.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impressora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamento dinheiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamento dinheiro32.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamento dinheiro48.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamento card48.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamento cheque48.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiado convenio48.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desconto48.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mbs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mbs1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="icone.ico" />
+    <Content Include="Resources\appbar.tools.png" />
+    <None Include="Resources\caixa.png" />
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
